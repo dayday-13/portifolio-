@@ -1,0 +1,238 @@
+mude a cor do portifolio para um azul bebe, mantenha o mesmo padrao, mude paenas a cor<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfólio Da DayDay</title>
+  <style>
+   body {
+      font-family: 'Comic Sans MS', cursive, sans-serif;
+      background: linear-gradient(135deg, #BFEFFF, #fff); /* azul bebê */
+      color: #4682B4; /* azul médio */
+      margin: 0;
+      padding: 0;
+      animation: fadeIn 2s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    header {
+      background-color: #ADD8E6; /* azul bebê */
+      padding: 20px;
+      text-align: center;
+      border-bottom: 5px solid #4682B4; /* azul médio */
+      animation: pulse 3s infinite;
+    }
+
+    header h1 {
+      margin: 0;
+      color: #fff;
+      text-shadow: 2px 2px #4682B4;
+    }
+
+    @keyframes pulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.05); color: #E0FFFF; }
+      100% { transform: scale(1); }
+    }
+
+    .materia {
+      margin: 30px 42px;
+    }
+
+    .materia h2 {
+      color: #4682B4;
+      margin-bottom: 15px;
+      border-bottom: 3px dashed #ADD8E6;
+      padding-bottom: 5px;
+      font-style: italic;
+    }
+
+    .tarefas {
+      display: flex;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
+
+    .tarefa {
+      flex: 1;
+      background-color: #E0FFFF; /* azul clarinho */
+      border: 2px solid #ADD8E6;
+      border-radius: 15px;
+      text-align: center;
+      padding: 15px;
+      transition: transform 0.4s, box-shadow 0.4s;
+      position: relative;
+    }
+
+    .tarefa:hover {
+      transform: scale(1.1) rotate(-2deg);
+      box-shadow: 0 0 20px #ADD8E6;
+    }
+
+    .tarefa a {
+      color: #4682B4;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+
+    .tarefa a:hover {
+      color: #004080;
+    }
+
+    footer {
+      background-color: #ADD8E6;
+     /* position: fixed; */
+      bottom: 0;
+      width: 100%;
+      padding: 1%;
+      text-align: center;
+      color: #004080;
+      font-weight: bold;
+      border-top: 3px solid #4682B4;
+    }
+
+    /* Efeito de corações subindo */
+    @keyframes floatHearts {
+      0% { transform: translateY(0) scale(1); opacity: 1; }
+      100% { transform: translateY(-200px) scale(1.5); opacity: 0; }
+    }
+
+    .heart {
+      position: fixed;
+      bottom: 10px;
+      font-size: 24px;
+      color: #4682B4; /* corações em azul */
+      animation: floatHearts 4s linear infinite;
+    }
+
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>Portfólio Da DayDay</h1>
+  </header>
+
+  <script>
+    // Criar corações animados
+    setInterval(() => {
+      const heart = document.createElement("div");
+      heart.className = "heart";
+      heart.textContent = "💖";
+      heart.style.left = Math.random() * window.innerWidth + "px";
+      document.body.appendChild(heart);
+
+      setTimeout(() => heart.remove(), 4000);
+    }, 1000);
+
+    // Mensagem divertida ao clicar
+    document.querySelectorAll('.tarefa a').forEach(link => {
+      link.addEventListener('click', (e) => {
+        e.preventDefault();
+        alert(`🎀 Você escolheu: ${link.textContent} 🎀`);
+      });
+    });
+  </script>
+
+
+  <!-- Mobile -->
+  <div class="materia">
+    <h2>Mobile</h2>
+    <div class="tarefas">
+      
+      <div class="tarefa"><a href="../back end/Captura de tela 2026-04-27 104856.png" target="_blank">Expo snack</a></div>
+      <div class="tarefa"><a href="atividades/mobile/tarefa2.html" target="_blank">Pendente</a></div>
+      <div class="tarefa"><a href="atividades/mobile/tarefa3.html" target="_blank">Pendente</a></div>
+      <div class="tarefa"><a href="atividades/mobile/tarefa4.html" target="_blank">Pendente</a></div>
+      <div class="tarefa"><a href="atividades/mobile/tarefa5.html" target="_blank">Pendente</a></div>
+    </div>
+  </div>
+
+  <!-- Análise -->
+  <div class="materia">
+    <h2>Análise</h2>
+    <div class="tarefas">
+      <div class="tarefa"><a href="https://gamma.app/docs/Startups-de-Ponta-no-Brasil-O-Futuro-e-Agora-2026-7dzz79s8cyj2e4d" target="_blank">Startup</a></div>
+      <div class="tarefa"><a href="https://gamma.app/docs/Metricas-e-Melhorias-nos-Negocios-O-Caminho-para-o-Crescimento-Su-m2ono2lty2k4hkk" target="_blank">Métricas</a></div>
+      <div class="tarefa"><a href="atividades/analise/tarefa3.html" target="_blank">Pendente</a></div>
+      <div class="tarefa"><a href="atividades/analise/tarefa4.html" target="_blank">Pendente</a></div>
+      <div class="tarefa"><a href="atividades/analise/tarefa5.html" target="_blank">Pendente</a></div>
+    </div>
+  </div>
+
+  <!-- JavaScript -->
+  <div class="materia">
+    <h2>JavaScript</h2>
+    <div class="tarefas">
+      <div class="tarefa"><a href="https://github.com/dayday-13/terceirao2026/blob/main/alterar.js" target="_blank">alterar</a></div>
+      <div class="tarefa"><a href="https://github.com/dayday-13/terceirao2026/blob/main/teste2.js" target="_blank">teste2</a></div>
+      <div class="tarefa"><a href="https://github.com/dayday-13/terceirao2026/blob/main/array.js" target="_blank">array</a></div>
+      <div class="tarefa"><a href="https://github.com/dayday-13/terceirao2026/blob/main/back_continue.js" target="_blank">back-continue</a></div>
+      <div class="tarefa"><a href="https://github.com/dayday-13/terceirao2026/blob/main/carro.js" target="_blank">carro</a></div>
+      <div class="tarefa"><a href="https://github.com/dayday-13/terceirao2026/blob/main/filtrar.js" target="_blank">filtrar</a></div>
+      <div class="tarefa"><a href="https://github.com/dayday-13/terceirao2026/blob/main/leitura.js" target="_blank">leitura</a></div>
+      <div class="tarefa"><a href="https://github.com/dayday-13/terceirao2026/blob/main/objeto.js" target="_blank">objeto</a></div>
+      <div class="tarefa"><a href="https://github.com/dayday-13/terceirao2026/blob/main/substring.js" target="_blank">substring</a></div>
+      <div class="tarefa"><a href="https://github.com/dayday-13/terceirao2026/blob/main/teste.js" target="_blank">teste1</a></div>
+      <div class="tarefa"><a href="https://github.com/dayday-13/terceirao2026/blob/main/usandobreak.js" target="_blank">usando break</a></div>
+      <div class="tarefa"><a href="https://github.com/dayday-13/terceirao2026/blob/main/usandoform.js" target="_blank">usando form</a></div>
+      <div class="tarefa"><a href="https://github.com/dayday-13/terceirao2026/blob/main/variavel.js" target="_blank">variável</a></div>
+
+    </div>
+  </div>
+
+  
+  <!-- JavaScript -->
+  <div class="materia">
+    <h2>JavaScript</h2>
+    <div class="tarefas">
+       <div class="tarefa"><a href="https://github.com/dayday-13/terceirao2026/blob/1ff9d1f86ea229633bafbcc2cbd9291bd679d908/cochete.js" target="_blank">conchete</a></div>
+       <div class="tarefa"><a href="https://github.com/dayday-13/terceirao2026/blob/1ff9d1f86ea229633bafbcc2cbd9291bd679d908/launch.json" target="_blank">lounch</a></div>
+    </div>
+  </div>
+
+  <!-- Back-End -->
+  <div class="materia">
+    <h2>Back-End</h2>
+    <div class="tarefas">
+      <div class="tarefa"><a href="https://dayday-13.github.io/figurinhas/" target="_blank">figurinhas da copa</a></div>
+      <div class="tarefa"><a href="https://github.com/dayday-13/terceirao2026/blob/main/apescolar.html" target="_blank">app escolar</a></div>
+      <div class="tarefa"><a href="https://github.com/dayday-13/terceirao2026/blob/main/teste.html" target="_blank">teste html</a></div>
+      <div class="tarefa"><a href="atividades/backend/tarefa4.html" target="_blank">Pendente</a></div>
+      <div class="tarefa"><a href="atividades/backend/tarefa5.html" target="_blank">Pendente</a></div>
+    </div>
+  </div>
+
+
+  <!-- Python -->
+  <div class="materia">
+    <h2>Python</h2>
+    <div class="tarefas">
+      <div class="tarefa"><a href="atividades/python/tarefa1.html" target="_blank">Pendente</a></div>
+      <div class="tarefa"><a href="atividades/python/tarefa2.html" target="_blank">Pendente</a></div>
+      <div class="tarefa"><a href="atividades/python/tarefa3.html" target="_blank">Pendente</a></div>
+      <div class="tarefa"><a href="atividades/python/tarefa4.html" target="_blank">Pendente</a></div>
+      <div class="tarefa"><a href="atividades/python/tarefa5.html" target="_blank">Pendente</a></div>
+    </div>
+  </div>
+
+  <script>
+    // Interatividade simples: alerta ao clicar
+    document.querySelectorAll('.tarefa a').forEach(link => {
+      link.addEventListener('click', () => {
+        alert(`Abrindo: ${link.textContent}`);
+      }
+     ) })
+     </script>
+
+</body>
+</html>
+
+<footer>
+  <p>© 2026 - Desenvolvido por Dayellenn</p>
+</footer>
